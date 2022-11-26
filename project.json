@@ -1,0 +1,66 @@
+{
+    "name": "App",
+    "options": {
+        "bundleIdPrefix": "uz.akhmedovgg",
+        "generateEmptyDirectories": true,
+    },
+    "targets": {
+        "App iOS": {
+            "type": "application",
+            "platform": "iOS",
+            "deploymentTarget": "11.0",
+            "settings": {
+                "PRODUCT_BUNDLE_IDENTIFIER": "uz.akhmedovgg.app"
+            },
+            "sources": [
+                "App iOS"
+            ],
+            "info": {
+                "path": "App iOS/Metadata/Info.plist",
+                "properties": {
+                    "CFBundleName": "App",
+                    "CFBundleVersion": "1",
+                    "CFBundleShortVersionString": "1.0.0",
+                    "UILaunchStoryboardName": "LaunchScreen",
+                    "UIUserInterfaceStyle": "Light",
+                    "UISupportedInterfaceOrientations": [
+                        "UIInterfaceOrientationPortrait"
+                    ],
+                    "UIRequiresFullScreen": true,
+                    "ITSAppUsesNonExemptEncryption": false,
+                    "UIAppFonts": [
+                        "Poppins-Black.ttf",
+                        "Poppins-BlackItalic.ttf",
+                        "Poppins-Bold.ttf",
+                        "Poppins-BoldItalic.ttf",
+                        "Poppins-ExtraBold.ttf",
+                        "Poppins-ExtraBoldItalic.ttf",
+                        "Poppins-ExtraLight.ttf",
+                        "Poppins-ExtraLightItalic.ttf",
+                        "Poppins-Italic.ttf",
+                        "Poppins-Light.ttf",
+                        "Poppins-LightItalic.ttf",
+                        "Poppins-Medium.ttf",
+                        "Poppins-MediumItalic.ttf",
+                        "Poppins-Regular.ttf",
+                        "Poppins-SemiBold.ttf",
+                        "Poppins-SemiBoldItalic.ttf",
+                        "Poppins-Thin.ttf",
+                        "Poppins-ThinItalic.ttf",
+                    ]
+                },
+            },
+            "preBuildScripts": [
+                {
+                    "name": "[R.swift] Resource generator",
+                    "shell": "/bin/sh",
+                    "script": "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/App iOS/Generated/R.generated.swift\"",
+                    "outputFiles": [
+                        "$SRCROOT/App iOS/Generated/R.generated.swift"
+                    ],
+                    "basedOnDependencyAnalysis": false,
+                }
+            ]
+        }
+    }
+}
