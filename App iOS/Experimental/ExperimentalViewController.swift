@@ -6,13 +6,13 @@
 //
 
 import UIKit
+import Rswift
 
-class ExperimentalViewController: UIViewController {
+class ExperimentalViewController: AFTViewController<ExperimentalView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
+        rootView.recentOrderView.applyWith(title: "Mexican pizza + free coke, Cheesy Garlic Bread, 2x Peach Smoothie", price: "€16.00")
     }
 }
-

@@ -20,13 +20,17 @@ DerivedData
 xcuserdata/
 .DS_Store
 
-# Xcodegen
-#
-App.xcodeproj
-
-
 # CocoaPods
 #
 
 Pods/
 Podfile.lock
+
+# Xcodegen
+#
+App.xcodeproj
+
+
+# Generated files
+#
+App iOS/Generated/

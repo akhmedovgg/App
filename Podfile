@@ -18,4 +18,5 @@ target 'App iOS' do
 
   pod 'PinLayout'
   pod 'R.swift'
+  pod 'Kingfisher'
 end
