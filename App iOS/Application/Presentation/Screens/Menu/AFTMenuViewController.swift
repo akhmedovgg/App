@@ -65,7 +65,6 @@ class AFTMenuViewController: AFTViewController<AFTMenuView>, AFTMenuPresenterToV
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         presenter?.fetchScreenDetails()
     }
     
